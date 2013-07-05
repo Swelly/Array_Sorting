@@ -3,7 +3,9 @@ students = ["Alan Appelstein", "Alice Mottola", "Alina Guzman", "andrew silbersm
 puts "How many members would you prefer in a group?"
   group_members = gets.chomp.to_i
 
-#Randomize students
+puts 'clear'
+
+#Randomize students array
 students.shuffle!
 
 total_groups = students.length / group_members
@@ -12,6 +14,7 @@ groups = []
 
 #Using .pop to populate groups[] from students
 total_groups.times do |goku|
+  puts "\n\nGroup #{goku}: "
   groups << students.pop(group_members)
 end
 
